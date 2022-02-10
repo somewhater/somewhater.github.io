@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>猜猜你的银行卡密码</title>
+    <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.1.1.min.js"></script>
+</head>
+<body style="margin: 0px;overflow-x: hidden;overflow-y: hidden;" >
+    <h1 id="h1" style="font-size: 500px;text-align: center;margin-top: 150px;"></h1>
+<script>
+    $(function(){
+        setInterval(function(){
+        var x = 900000;       
+        var y = 100000;           
+        var rand = parseInt(Math.random() * (x - y + 1) + y);    
+            $("#h1").text(rand);
+        },300);
+    });
+</script>
+</body>
+</html>

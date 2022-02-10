@@ -7,12 +7,9 @@
     <style type="text/css">
         h1{
             height: 500px;
-            margin: 40px auto;
             background: url("./background.jpg") no-repeat center center;
             background-size: cover;
-            font-size: 120px;
             font-weight: bold;
-            text-align: center;
             line-height: 500px;
             /*很重要*/
             -webkit-background-clip: text;
@@ -26,14 +23,12 @@
     $(function(){
         setInterval(function(){
             var x = 900000;       
-            var y = 100000;           
-            var rand1 = parseInt(Math.random() * (x - y + 1) + y);    
-            var rand2 = parseInt(Math.random() * (x - y + 1) + y);    
-            var rand3 = parseInt(Math.random() * (x - y + 1) + y);    
-            $("#h1").text(rand1.toString(16).toUpperCase()+rand2.toString(16).toUpperCase());
-            $("#h1").css('font-size',rand1/2000+'px');
-            $("#h1").css('margin-top',rand2/4000+'px');
-            $("#h1").css('margin-left',rand3/4000+'px');
+            var y = 100000;  
+            var hh = (parseInt(Math.random() * (x - y + 1) + y)).toString(16).toUpperCase()+(parseInt(Math.random() * (x - y + 1) + y)).toString(16).toUpperCase();
+            $("#h1").text(hh);
+            $("#h1").css('font-size',(parseInt(Math.random() * (x - y + 1) + y))/2000+'px');
+            $("#h1").css('margin-top',(parseInt(Math.random() * (x - y + 1) + y))/4000+'px');
+            $("#h1").css('margin-left',(parseInt(Math.random() * (x - y + 1) + y))/4000+'px');
         },300);
     });
 </script>

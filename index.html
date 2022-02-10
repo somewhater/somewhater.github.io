@@ -2,18 +2,38 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>猜猜你的银行卡密码</title>
+    <title>ByteDance</title>
     <script src="./jquery-2.1.1.min.js"></script>
+    <style type="text/css">
+        h1{
+            height: 500px;
+            margin: 40px auto;
+            background: url("./background.jpg") no-repeat center center;
+            background-size: cover;
+            font-size: 120px;
+            font-weight: bold;
+            text-align: center;
+            line-height: 500px;
+            /*很重要*/
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
 </head>
-<body style="margin: 0px;overflow-x: hidden;overflow-y: hidden;" >
-    <h1 id="h1" style="font-size: 500px;text-align: center;margin-top: 150px;"></h1>
+<body style="margin: 0px;overflow-x: hidden;overflow-y: hidden;" background='./WallpaperDog-20459082.jpg' >
+    <h1 id="h1" style="font-size: 500px;text-align: center;margin-top: 150px;margin-left: 10px;"></h1>
 <script>
     $(function(){
         setInterval(function(){
-        var x = 900000;       
-        var y = 100000;           
-        var rand = parseInt(Math.random() * (x - y + 1) + y);    
-            $("#h1").text(rand);
+            var x = 900000;       
+            var y = 100000;           
+            var rand1 = parseInt(Math.random() * (x - y + 1) + y);    
+            var rand2 = parseInt(Math.random() * (x - y + 1) + y);    
+            var rand3 = parseInt(Math.random() * (x - y + 1) + y);    
+            $("#h1").text(rand1);
+            $("#h1").css('font-size',rand1/2000+'px');
+            $("#h1").css('margin-top',rand2/4000+'px');
+            $("#h1").css('margin-left',rand3/4000+'px');
         },300);
     });
 </script>
